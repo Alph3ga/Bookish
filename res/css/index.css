@@ -1,0 +1,70 @@
+/*all the font families*/
+
+.head_font{
+    font-family: 'Antic Slab', serif;
+}
+.body_font{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/*general styling*/
+
+body{
+    background-color: #6f9c8b;
+}
+
+#heading_name{
+    padding: 0;
+    margin: 0;
+    font-size: 10vw;
+    text-align: center;
+}
+
+#nav_div{
+    display: block;
+    overflow-y: auto;
+    margin: auto;
+    margin-bottom: 0;
+    width: 85%;
+}
+
+.nav_button{
+    font-family: 'Cormorant Garamond', serif;
+    color: #252525;
+    height: 4vw;
+    width: 10vw;
+    background-color: #5d8c7e;
+    border: none;
+    border-radius: 2px;
+    margin: 3px;
+}
+
+#search_div{
+    display: block;
+    text-align: center;
+}
+
+#search_bar{
+    height: 4vw;
+    width: 85%;
+    color: black;
+    font-size: 2vw;
+    background-color: #5d8c7e;
+    border: none;
+    border-bottom: 2px solid #505050;
+    border-radius: 2px;
+}
+
+#search_bar::placeholder{
+    color: rgb(58, 58, 58);
+}
+
+#search_bar::-ms-input-placeholder{
+    color: rgb(58, 58, 58);
+}
+
+#search_bar:focus{
+    outline: none;
+    resize: none;
+    background-color: #4d7569;
+}

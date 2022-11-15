@@ -68,3 +68,47 @@ body{
     resize: none;
     background-color: #4d7569;
 }
+
+#catalogue_div{
+    display: block;
+    text-align: center;
+    padding: 0;
+}
+
+#book_thumbnail{
+    width:30vw;
+}
+
+#book_info{
+    display: block;
+    text-align: center;
+}
+
+#book_description{
+    margin: auto;
+    width: 50vw;
+}
+
+#nav_left, #nav_right {
+    background-color: transparent;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+#nav_left{
+    transform: rotate(135deg);
+}
+
+#nav_right{
+    transform: rotate(-45deg);
+}
+
+#book_name{
+    font-size: 3vw;
+}
+
+#book_description{
+    font-size: 2vw;
+}

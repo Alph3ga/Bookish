@@ -1,3 +1,10 @@
+/* root variables*/
+
+:root{
+    --light-green: #5d8c7e;
+    --dark-green: #4d7569;
+}
+
 /*all the font families*/
 
 .head_font{
@@ -33,10 +40,14 @@ body{
     color: #252525;
     height: 4vw;
     width: 10vw;
-    background-color: #5d8c7e;
+    background-color: var(--light-green);
     border: none;
     border-radius: 2px;
     margin: 3px;
+}
+
+.nav_button:active{
+    background-color: var(--dark-green);
 }
 
 #search_div{
@@ -49,7 +60,7 @@ body{
     width: 85%;
     color: black;
     font-size: 2vw;
-    background-color: #5d8c7e;
+    background-color: var(--light-green);
     border: none;
     border-bottom: 2px solid #505050;
     border-radius: 2px;
@@ -66,7 +77,7 @@ body{
 #search_bar:focus{
     outline: none;
     resize: none;
-    background-color: #4d7569;
+    background-color: var(--dark-green);
 }
 
 #catalogue_div{

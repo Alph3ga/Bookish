@@ -16,9 +16,10 @@
             <button type="button" class="nav_button" style="float: left;">Random</button>
             <button type="button" class="nav_button" style="float: right;">Log In</button>
         </div>
-        <div id="search_div">
-            <input id="search_bar" class="body_font" type="text" placeholder="Enter a Book name...">
-        </div>
+        <form action="/search" method="get" style="display: flex; flex-direction: column; align-items: center;">
+            <input id="search_bar" class="body_font" name="search_text" type="text" placeholder="Enter a Book name...">
+            <button class="nav_button">Search</button>
+        </form>
 
         <div id="catalogue_div" class="body_font">
             <div style="align-items: center; display: flex; flex-direction: row; justify-content: center;">

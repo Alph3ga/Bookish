@@ -1,9 +1,10 @@
 var express= require('express');
 var fs= require('fs').promises;
+var apiK= require('./bookApi');
 
 var app= express();
-const host = 'localhost';
-const port = 8000;
+const host = '0.0.0.0';
+const port = 3000;
 
 const initialRequestListener= (req,res)=>{
     fs.readFile(__dirname + "/res/html/index.html").then(
@@ -22,3 +23,5 @@ const initialRequestListener= (req,res)=>{
 app.get('/', initialRequestListener);
 app.use(express.static('res'));
 app.listen(port, host);
+
+apiK.getVolumesInfo('percy jackson').then(books=> console.log(books[0].volumeInfo.imageLinks));

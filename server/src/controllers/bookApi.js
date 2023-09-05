@@ -1,4 +1,4 @@
-const fetch= require('node-fetch');
+/*const fetch= require('node-fetch');
 const apiKey= process.env.API_KEY;
 
 const getURL= 'https://www.googleapis.com/books/v1/volumes?q=';
@@ -26,4 +26,4 @@ exports.getVolumesInfo= (name)=> {
         }
     )};
 
-exports.scrapeInfo= (url)=> fetch(url);
+exports.scrapeInfo= (url)=> fetch(url);*/

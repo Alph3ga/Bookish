@@ -1,9 +1,10 @@
 {
-  "dependencies": {
-    "express": "^4.18.2",
-    "node-fetch": "^2.6.1"
-  },
-  "scripts": {
-    "start": "node index.js"
-  }
+    "scripts": {
+        "server": "npm --prefix ./server run dev",
+        "client": "npm --prefix ./client run start",
+        "dev": "concurrently \"npm run server\" \"npm run client\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.1"
+    }
 }

@@ -1,0 +1,131 @@
+/* root variables*/
+
+:root{
+  --light-green: #5d8c7e;
+  --dark-green: #4d7569;
+}
+
+/*all the font families*/
+
+.head_font{
+  font-family: 'Antic Slab', serif;
+}
+.body_font{
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/*general styling*/
+
+body{
+  background-color: #6f9c8b;
+}
+
+#heading_name{
+  padding: 0;
+  margin: 0;
+  font-size: 10vw;
+  text-align: center;
+}
+
+#nav_div{
+  display: block;
+  overflow-y: auto;
+  margin: auto;
+  margin-bottom: 0;
+  width: 85%;
+}
+
+.nav_button{
+  font-family: 'Cormorant Garamond', serif;
+  color: #252525;
+  height: 4vw;
+  width: 10vw;
+  background-color: var(--light-green);
+  border: none;
+  border-radius: 2px;
+  margin: 3px;
+}
+
+.nav_button:active{
+  background-color: var(--dark-green);
+}
+
+#search_div{
+  display: block;
+  text-align: center;
+}
+
+#search_bar{
+  height: 4vw;
+  width: 85%;
+  color: black;
+  font-size: 2vw;
+  background-color: var(--light-green);
+  border: none;
+  border-bottom: 2px solid #505050;
+  border-radius: 2px;
+}
+
+#search_bar::placeholder{
+  color: rgb(58, 58, 58);
+}
+
+#search_bar::-ms-input-placeholder{
+  color: rgb(58, 58, 58);
+}
+
+#search_bar:focus{
+  outline: none;
+  resize: none;
+  background-color: var(--dark-green);
+}
+
+#catalogue_div{
+  display: block;
+  text-align: center;
+  padding: 0;
+}
+
+#book_thumbnail{
+  width:30vw;
+}
+
+#book_info{
+  display: block;
+  text-align: center;
+}
+
+#book_description{
+  margin: auto;
+  width: 50vw;
+}
+
+#nav_left, #nav_right {
+  background-color: transparent;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+#nav_left{
+  transform: rotate(135deg);
+}
+
+#nav_right{
+  transform: rotate(-45deg);
+}
+
+#book_name{
+  font-size: 3vw;
+}
+
+#book_description{
+  font-size: 2vw;
+}
+
+form{
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}

@@ -1,7 +1,16 @@
 import '../styles/HomePage.css';
 import default_book_cover from '../assets/cover_template.jpg'
+import {useEffect, useState} from 'react';
+import axios from 'axios';
+
 
 function HomePage() {
+  const [message, setMessage]= useState("")
+  useEffect(()=>{
+  axios.get((process.env.SERVER || "http://localhost")+':8080').then((res)=>{
+    setMessage(res.data.name);
+  });});
+
   return (
     <div className="HomePage">
       <p id="heading_name" className="head_font">Bookish</p>
@@ -22,7 +31,7 @@ function HomePage() {
             <button id="nav_right" style={{float: "right"}}></button>
             </div>
             <div id="book_info">
-                <p id="book_name" className="head_font">PLACEHOLDER</p>
+                <p id="book_name" className="head_font">PLACEHOLDER {message}</p>
                 <p id="book_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Vestibulum pharetra rutrum ligula a pharetra. Nulla sagittis eros elit, in faucibus ipsum maximus in. 
                     Pellentesque luctus elementum odio, eu dignissim eros placerat ut. Duis ac porta tellus. 

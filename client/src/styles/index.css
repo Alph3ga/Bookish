@@ -1,13 +1,43 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+  height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root{
+  --light-green: #5d8c7e;
+  --dark-green: #4d7569;
+}
+
+/*all the font families*/
+
+.head_font{
+  font-family: 'Antic Slab', serif;
+}
+.body_font{
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/*general styling*/
+
+body{
+  background-color: #6f9c8b;
+}
+
+#Footer{
+  height: fit-content;
+  margin-bottom: 0;
+  padding-bottom: 0.5vw;
+  bottom: 0;
+  position: fixed;
 }

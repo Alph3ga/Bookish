@@ -1,0 +1,101 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/styles/BookInfo.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+.book-container {
+    border: 2px solid #acd5b4;
+    margin: 1vw;
+    background: #78ac9c;
+    padding: 1vw;
+    border-radius: 5px;
+  }
+  
+  .book-info {
+    display: flex;
+  }
+  
+  .book-image {
+    height: 12vw;
+    margin-right: 2vw;
+  }
+  
+  .book-details {
+    flex: 1 1;
+  }
+  
+  .book-title {
+    margin-bottom: 1vw;
+    font-size: 1.6vw;
+    text-decoration: underline;
+    color: black;
+  }
+  
+  .book-author {
+    font-size: 1.4vw;
+    margin-bottom: 1vw;
+  }
+  
+  .book-description {
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+  }
+  
+  .book-price {
+    font-size: 1vw;
+    font-weight: italic;
+  }
+  
+  .expand-button {
+    border: none;
+    background: none;
+    color: blue;
+    cursor: pointer;
+    font-size: 1.2vw;
+  }
+  
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/styles/index.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+body {
+  margin: 0;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root{
+  --light-green: #5d8c7e;
+  --dark-green: #4d7569;
+}
+
+/*all the font families*/
+
+.head_font{
+  font-family: 'Antic Slab', serif;
+}
+.body_font{
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/*general styling*/
+
+body{
+  background-color: #6f9c8b;
+}
+
+#Footer{
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 0;
+  padding-bottom: 0.5vw;
+  bottom: 0;
+  position: fixed;
+}

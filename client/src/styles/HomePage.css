@@ -1,25 +1,5 @@
 /* root variables*/
 
-:root{
-  --light-green: #5d8c7e;
-  --dark-green: #4d7569;
-}
-
-/*all the font families*/
-
-.head_font{
-  font-family: 'Antic Slab', serif;
-}
-.body_font{
-  font-family: 'Cormorant Garamond', serif;
-}
-
-/*general styling*/
-
-body{
-  background-color: #6f9c8b;
-}
-
 #heading_name{
   padding: 0;
   margin: 0;

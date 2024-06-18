@@ -1,23 +1,31 @@
-/*const fetch= require('node-fetch');
+const axios= require('axios')
 const apiKey= process.env.API_KEY;
 
 const getURL= 'https://www.googleapis.com/books/v1/volumes?q=';
 
-const getVolumeJSON= (name)=> fetch(getURL+
+const getVolumeJSON= (name)=> axios.get(getURL+
     encodeURIComponent(name)+
     "&key="+
     apiKey);
 
 exports.getVolumesInfo= (name)=> {
     return getVolumeJSON(name).then(
-    res=> res.json()).then(
+    res=> res.data).then(
         json=> {
-            if(json.totalItems>5){
-                var books=[json.items[0],
-                json.items[1],
-                json.items[2],
-                json.items[3],
-                json.items[4]]
+            if(json.totalItems>7){
+                var books=json.items.slice(0,7).map(
+                    (volume)=>{
+                        return {
+                            "title": volume.volumeInfo.title,
+                            "authors": volume.volumeInfo.authors,
+                            "description": volume.volumeInfo.description,
+                            "saleability": volume.saleInfo.saleability,
+                            "price": volume.saleInfo.listPrice? volume.saleInfo.listPrice.amount : null,
+                            "image": volume.volumeInfo.imageLinks.thumbnail,
+                            "link": volume.volumeInfo.canonicalVolumeLink
+                        }
+                    }
+                );
             }
             else{
                 var books= json.items;
@@ -25,5 +33,3 @@ exports.getVolumesInfo= (name)=> {
             return books;
         }
     )};
-
-exports.scrapeInfo= (url)=> fetch(url);*/

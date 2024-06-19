@@ -16,6 +16,7 @@ exports.getVolumesInfo= (name)=> {
                 var books=json.items.slice(0,7).map(
                     (volume)=>{
                         return {
+                            "id": volume.id,
                             "title": volume.volumeInfo.title,
                             "authors": volume.volumeInfo.authors,
                             "description": volume.volumeInfo.description,

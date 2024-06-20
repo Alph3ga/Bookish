@@ -34,6 +34,28 @@ body{
   background-color: #6f9c8b;
 }
 
+#Header{
+  display: block;
+  height: 4vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#Header p{
+  float: left;
+  width: fit-content;
+  margin: 0;
+  padding: 0.5vw;
+}
+
+#log{
+  height: fit-content;
+  float: right;
+  margin: 0;
+}
+
 #Footer{
   height: fit-content;
   margin-bottom: 0;

@@ -4,15 +4,18 @@ import '@/styles/HomePage.css';
 import '@/styles/index.css';
 import default_book_cover from '@/public/cover_template.jpg'
 import {useEffect, useState} from 'react';
-import axios from 'axios';
 
 
 export default function Page() {
-  const [message, setMessage]= useState("")
+  const [loggedIn, setLoggedIn]= useState(false);
   useEffect(()=>{
-  axios.get((process.env.SERVER || "http://localhost")+':8080').then((res)=>{
-    setMessage(res.data.name);
-  });});
+    if(localStorage.getItem('loggedIn')==null){
+      setLoggedIn(false);
+    }
+    else{
+      setLoggedIn(true);
+    }
+  })
 
   return (
     <div className="HomePage">
@@ -20,7 +23,7 @@ export default function Page() {
         <div id="nav_div">
             <button type="button" className="nav_button" style={{float: "left"}}>Genres</button>
             <button type="button" className="nav_button" style={{float: "left"}}>Random</button>
-            <button type="button" className="nav_button" style={{float: "right"}}>Log In</button>
+            <button type="button" className="nav_button" style={{float: "right"}}>{loggedIn? "Profile" : "Log in"}</button>
         </div>
         <form action="/search" method="get">
             <input id="search_bar" className="body_font" name="search_text" type="text" placeholder="Enter a Book name..."/>
@@ -34,7 +37,7 @@ export default function Page() {
             <button id="nav_right" style={{float: "right"}}></button>
             </div>
             <div id="book_info">
-                <p id="book_name" className="head_font">PLACEHOLDER {message}</p>
+                <p id="book_name" className="head_font">PLACEHOLDER</p>
                 <p id="book_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Vestibulum pharetra rutrum ligula a pharetra. Nulla sagittis eros elit, in faucibus ipsum maximus in. 
                     Pellentesque luctus elementum odio, eu dignissim eros placerat ut. Duis ac porta tellus. 

@@ -1,5 +1,6 @@
 const mongoose= require('mongoose');
 const User= require('../models/User.js');
+const { verifyJWT } = require('./encryption.js');
 
 const validateUserInfo= (body)=> {
     if(!body.userName || !body.password){
@@ -14,4 +15,28 @@ const validateUserInfo= (body)=> {
     return true;
 }
 
+const checkAccess= (req, res, next)=>{
+    const auth= req.headers.authorization;
+    if(auth== undefined){
+        res.status(401).send({message: 'User not authenticated. '});
+        return;
+    }
+    var tokens= auth.split(' ');
+    if(tokens[0]!="Bearer"){
+        res.status(403).send({message: 'Invalid credentials. '});
+        return;
+    }
+    const access= verifyJWT(tokens[1]);
+    if(!access){
+        res.status(403).send({message: 'Invalid credentials. '});
+        return;
+    }
+    if(access.accessLevel){
+        res.status(403).send({message: 'Unauthorized access. '});
+        return;
+    }
+    next();
+}
+
 exports.validateUserInfo= validateUserInfo;
+exports.checkAccess= checkAccess;

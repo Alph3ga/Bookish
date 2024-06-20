@@ -22,7 +22,7 @@ exports.getVolumesInfo= (name)=> {
                             "description": volume.volumeInfo.description,
                             "saleability": volume.saleInfo.saleability,
                             "price": volume.saleInfo.listPrice? volume.saleInfo.listPrice.amount : null,
-                            "image": volume.volumeInfo.imageLinks.thumbnail,
+                            "image": volume.volumeInfo.imageLinks? volume.volumeInfo.imageLinks.thumbnail: null,
                             "link": volume.volumeInfo.canonicalVolumeLink
                         }
                     }

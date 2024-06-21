@@ -6,9 +6,11 @@ const search= require('./controllers/search');
 const signup = require('./controllers/signup');
 const login = require('./controllers/login');
 const { checkAccess } = require('./util/validation');
+const randomBook = require('./controllers/randomBook');
 
 router.get('/', homePage);
 router.get('/search', search);
+router.get('/random', randomBook);
 
 router.post('/signup', signup);
 router.post('/login', login);

@@ -3,6 +3,9 @@ import { useRouter } from "next/navigation";
 import useAuthToken from "util/AuthToken";
 import { useState, useEffect } from "react";
 
+import '@/styles/index.css'
+import '@/styles/HomePage.css'
+
 export default function Header(){
     const [loggedIn, setLoggedIn]= useState(false);
     const { removeToken }= useAuthToken();
@@ -26,11 +29,19 @@ export default function Header(){
             router.push('/login');
         }
     };
+    const handleClick2= (event)=>{
+        event.preventDefault();
+
+        router.push('/signup')
+    };
     return (
         <div id="Header">
             <p>BOOKISH</p>
-            <button id="log" className="nav_button" onClick={handleClick}>
+            <button className="nav_button log" onClick={handleClick}>
                 {loggedIn? "Log out": "Log in"}
+            </button>
+            <button style={{display: loggedIn? 'none':'block'}} className="nav_button log" onClick={handleClick2}>
+                Sign Up
             </button>
         </div>
     );

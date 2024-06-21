@@ -50,7 +50,7 @@ body{
   padding: 0.5vw;
 }
 
-#log{
+.log{
   height: fit-content;
   float: right;
   margin: 0;
@@ -62,4 +62,5 @@ body{
   padding-bottom: 0.5vw;
   bottom: 0;
   position: fixed;
+  background-color: #5d8c7e;
 }
